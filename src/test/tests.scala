@@ -1,18 +1,17 @@
 package aristotle
 
 import anticipation.*
-import 
+import probably.*
 
 object Tests extends Suite(t"Aristotle tests"):
   test(t"Matrix"):
-    math"[[a,b],[c,d]]"
     math"[[a\tb\nc\nd]]"
   
   test(t"Column vector"):
     math"(a\nb)"
   
   test(t"Augmented matrix"):
-    math"[[[a\tb\nc\td]|[c\nd]]]"
+    math"[[[a b\nc d]|[c\nd]]]"
   
   test(t"Subscripts"):
     math"lim_[N→∞]sum_[i=0]^N"
