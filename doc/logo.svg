@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120mm"
+   height="120mm"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg5"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient1450">
+      <stop
+         style="stop-color:#1e0046;stop-opacity:1;"
+         offset="0"
+         id="stop1446" />
+      <stop
+         style="stop-color:#9b004a;stop-opacity:1;"
+         offset="1"
+         id="stop1448" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient1450"
+       id="linearGradient1452"
+       x1="40"
+       y1="160"
+       x2="160"
+       y2="110"
+       gradientUnits="userSpaceOnUse" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1688">
+      <circle
+         style="fill:none;fill-opacity:1;stroke-width:0.015;stop-color:#000000"
+         id="circle1690"
+         cx="100"
+         cy="140"
+         r="60" />
+    </clipPath>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-40,-80)">
+    <g
+       id="g1701">
+      <g
+         id="g1663"
+         clip-path="url(#clipPath1688)">
+        <circle
+           style="fill:url(#linearGradient1452);fill-opacity:1;stroke-width:0.015;stop-color:#000000"
+           id="path236"
+           cx="100"
+           cy="140"
+           r="60" />
+        <path
+           style="font-size:10.5833px;line-height:1.25;font-family:'Overpass Mono';-inkscape-font-specification:'Overpass Mono';opacity:0.738197;fill:#faff02;fill-opacity:0.233074;stroke:none;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 40.000964,190.00338 160.00077,70.002918 159.99966,79.998766 49.999887,189.9997 Z"
+           id="path741" />
+        <path
+           style="font-size:10.5833px;line-height:1.25;font-family:'Overpass Mono';-inkscape-font-specification:'Overpass Mono';fill:#faff02;fill-opacity:0.233074;stroke:none;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 200.039,109.87347 -169.706264,0.002 7.068481,-7.06455 155.564423,0.001 z"
+           id="path741-3" />
+        <path
+           style="font-size:10.5833px;line-height:1.25;font-family:'Overpass Mono';-inkscape-font-specification:'Overpass Mono';fill:#faff02;fill-opacity:0.233074;stroke:none;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 49.999982,79.999992 -10.001295,9.995848 110.000153,110.00093 10.0013,-9.99584 z"
+           id="path743" />
+        <path
+           style="font-size:10.5833px;line-height:1.25;font-family:'Overpass Mono';-inkscape-font-specification:'Overpass Mono';fill:#faff02;fill-opacity:0.233074;stroke:none;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 185.5635,180.00017 8.9e-4,-14.13523 H 30.000941 l -8.86e-4,14.13523 z"
+           id="path743-9" />
+        <path
+           id="path741-6"
+           style="font-size:10.5833px;line-height:1.25;font-family:'Overpass Mono';-inkscape-font-specification:'Overpass Mono';opacity:0.489432;fill:#faff02;fill-opacity:0.233074;stroke:none;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 160.00057,74.236295 127.19224,107.04462 72.81106,107.04411 50.000049,84.233101 39.998592,94.22939 52.813314,107.04411 H 37.401335 l -7.06882,7.06468 29.544967,-5.2e-4 30.12581,30.12581 -25.863538,25.86406 H 30.000753 l -5.17e-4,14.13557 h 20.003947 l -10.003007,10.00301 9.998873,-0.004 9.999389,-9.99939 H 130.0024 l 19.9962,19.99619 10.00145,-9.99577 -10.00042,-10.00042 h 35.56372 l 10e-4,-14.13557 h -49.70032 l -30.86478,-30.8653 25.12508,-25.12508 69.91459,-0.001 -7.07347,-7.06158 -55.7785,-5.2e-4 22.81256,-22.812553 z m -39.87095,39.871465 -20.12746,20.12745 -20.126932,-20.12694 z m -25.1287,35.12395 20.86643,20.86643 H 74.134493 Z" />
+        <circle
+           id="path1541"
+           style="fill:#000000;stroke:none;stroke-width:0.264583"
+           cx="90.003281"
+           cy="140.00079"
+           r="0.39687499" />
+        <path
+           style="fill:#ff7e26;fill-opacity:0.628885;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 130.12444,109.87429 -50.249775,5.3e-4 25.124635,25.12482 -30.864908,30.86523 h 61.729928 l 14.13513,14.13523 H 50.004119 l 39.718528,-39.71874 -36.908872,-37.47041 84.373335,6.1e-4 z"
+           id="path1543" />
+      </g>
+    </g>
+  </g>
+</svg>
