@@ -30,7 +30,7 @@ For the overeager, curious and impatient, see [building](#building).
 
 ## Status
 
- is classified as ____. For reference, Scala One projects are
+ is classified as __embryotic__. For reference, Scala One projects are
 categorized into one of the following five stability levels:
 
 - _embryonic_: for experimental or demonstrative purposes only, without any guarantees of longevity
