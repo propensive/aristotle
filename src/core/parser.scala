@@ -8,7 +8,7 @@ import dendrology.*, treeStyles.default
 
 import scala.annotation.*
 
-import perforate.*, errorHandlers.throwUnsafely
+import contingency.*, errorHandlers.throwUnsafely
 import spectacular.*
 
 import unsafeExceptions.canThrowAny
@@ -27,25 +27,34 @@ object Math:
     val Open = text(0)
     val Close = complement(Open)
     var index: Int = 1
+    def next(): Optional[Char] = if index >= text.length then Unset else text(index).also(index += 1)
+    
+    given Show[Optional[Char]] =
+      case Unset => t""
+      case char  => char.toString.tt
 
-    def recur(current: Tree = Leaf): Tree =
-      text(index).also(index += 1) match
-        case Open  => current match
-          case Leaf                   => recur(Op(recur(Leaf), Unset, Leaf))
-          case Op(left, Unset, right) => recur(Op(left, '×', recur(right)))
-          case Op(left, node, right)  => recur(Op(left, node, recur(right)))
-        
-        case Close => current
-        
-        case char  => current match
-          case Leaf                   => recur(Op(Op(Leaf, char, Leaf), Unset, Leaf))
-          case Op(left, Unset, right) => recur(Op(left, char, right))
-          case Op(left, node, Leaf)   => recur(Op(left, node, Op(Leaf, char, Leaf)))
-          case Op(left, node, right)  =>
-            index -= 1
-            current
+    def recur(current: Tree = Leaf): Tree = next() match
+      case Unset =>
+        current
+
+      case Open  => current match
+        case Leaf                  => recur(Op(recur(Leaf), t"", Leaf))
+        case Op(left, t"", right)  => recur(Op(left, t"×", recur(right)))
+        case Op(left, node, right) => recur(Op(left, node, recur(right)))
       
-    recur()
+      case Close => current
+      
+      case char: Char => current match
+        case Leaf                  => recur(Op(Op(Leaf, char.show, Leaf), t"", Leaf))
+        case Op(left, t"", right)  => recur(Op(left, char.show, right))
+        case Op(left, node, Leaf)  =>
+          if char.isLetter == node.head.isLetter then recur(Op(left, t"$node$char", Leaf))
+          else recur(Op(left, node, Op(Leaf, char.show, Leaf)))
+        case Op(left, node, right) => recur(Op(current, char.show, Leaf))
+      
+    recur().also:
+      if index != text.length then ???
+
 
   def tree(text: Text): Unit =
     println(parse(text).show)
@@ -53,7 +62,7 @@ object Math:
 
 object Tree:
   given Expandable[Tree] =
-    case Leaf => Nil
+    case Leaf                   => Nil
     case Op(left, value, right) => List(left, right).filter(_ != Leaf)
 
   given Show[Tree] =
@@ -62,7 +71,7 @@ object Tree:
 
 enum Tree:
   case Leaf
-  case Op(left: Tree, operator: Optional[Char], right: Tree)
+  case Op(left: Tree, operator: Text, right: Tree)
 
 export Tree.*
 
