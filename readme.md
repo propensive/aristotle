@@ -111,7 +111,8 @@ O&Uuml;](https://propensive.com/).
 
 ## Name
 
-
+_Aristotle_ is named after the Greek philosopher, who was one of the earliest
+contributors to the field of mathematics.
 
 In general, Scala One project names are always chosen with some rationale,
 however it is usually frivolous. Each name is chosen for more for its
