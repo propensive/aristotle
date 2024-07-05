@@ -24,7 +24,7 @@ import dendrology.*, treeStyles.default
 
 import scala.annotation.*
 
-import contingency.*, errorHandlers.throwUnsafely
+import contingency.*, strategies.throwUnsafely
 import spectacular.*
 
 import unsafeExceptions.canThrowAny
@@ -44,7 +44,7 @@ object Math:
     val Close = complement(Open)
     var index: Int = 1
     def next(): Optional[Char] = if index >= text.length then Unset else text(index).also(index += 1)
-    
+
     given Show[Optional[Char]] =
       case Unset => t""
       case char  => char.toString.tt
@@ -57,9 +57,9 @@ object Math:
         case Leaf                  => recur(Op(recur(Leaf), t"", Leaf))
         case Op(left, t"", right)  => recur(Op(left, t"×", recur(right)))
         case Op(left, node, right) => recur(Op(left, node, recur(right)))
-      
+
       case Close => current
-      
+
       case char: Char => current match
         case Leaf                  => recur(Op(Op(Leaf, char.show, Leaf), t"", Leaf))
         case Op(left, t"", right)  => recur(Op(left, char.show, right))
@@ -67,7 +67,7 @@ object Math:
           if char.isLetter == node.head.isLetter then recur(Op(left, t"$node$char", Leaf))
           else recur(Op(left, node, Op(Leaf, char.show, Leaf)))
         case Op(left, node, right) => recur(Op(current, char.show, Leaf))
-      
+
     recur().also:
       if index != text.length then ???
 
