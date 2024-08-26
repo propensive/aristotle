@@ -1,8 +1,8 @@
-[<img alt="GitHub Workflow" src="https://img.shields.io/github/actions/workflow/status/propensive//main.yml?style=for-the-badge" height="24">](https://github.com/propensive//actions)
+[<img alt="GitHub Workflow" src="https://img.shields.io/github/actions/workflow/status/propensive/aristotle/main.yml?style=for-the-badge" height="24">](https://github.com/propensive/aristotle/actions)
 [<img src="https://img.shields.io/discord/633198088311537684?color=8899f7&label=DISCORD&style=for-the-badge" height="24">](https://discord.gg/7b6mpF6Qcf)
 <img src="/doc/images/github.png" valign="middle">
 
-# 
+# Aristotle
 
 __A library and language for writing MathML__
 
@@ -14,12 +14,12 @@ __A library and language for writing MathML__
 
 ## Availability Plan
 
- has not yet been published. The medium-term plan is to build 
+Aristotle has not yet been published. The medium-term plan is to build Aristotle
 with [Fury](https://github.com/propensive/fury) and to publish it as a source build on
 [Vent](https://github.com/propensive/vent). This will enable ordinary users to write and build
-software which depends on .
+software which depends on Aristotle.
 
-Subsequently,  will also be made available as a binary in the Maven
+Subsequently, Aristotle will also be made available as a binary in the Maven
 Central repository. This will enable users of other build tools to use it.
 
 For the overeager, curious and impatient, see [building](#building).
@@ -30,7 +30,7 @@ For the overeager, curious and impatient, see [building](#building).
 
 ## Status
 
- is classified as __embryotic__. For reference, Scala One projects are
+Aristotle is classified as __embryotic__. For reference, Scala One projects are
 categorized into one of the following five stability levels:
 
 - _embryonic_: for experimental or demonstrative purposes only, without any guarantees of longevity
@@ -43,20 +43,20 @@ Projects at any stability level, even _embryonic_ projects, can still be used,
 as long as caution is taken to avoid a mismatch between the project's stability
 level and the required stability and maintainability of your own project.
 
- is designed to be _small_. Its entire source code currently consists
+Aristotle is designed to be _small_. Its entire source code currently consists
 of 98 lines of code.
 
 ## Building
 
- will ultimately be built by Fury, when it is published. In the
+Aristotle will ultimately be built by Fury, when it is published. In the
 meantime, two possibilities are offered, however they are acknowledged to be
 fragile, inadequately tested, and unsuitable for anything more than
 experimentation. They are provided only for the necessity of providing _some_
-answer to the question, "how can I try ?".
+answer to the question, "how can I try Aristotle?".
 
 1. *Copy the sources into your own project*
    
-   Read the `fury` file in the repository root to understand 's build
+   Read the `fury` file in the repository root to understand Aristotle's build
    structure, dependencies and source location; the file format should be short
    and quite intuitive. Copy the sources into a source directory in your own
    project, then repeat (recursively) for each of the dependencies.
@@ -67,7 +67,7 @@ answer to the question, "how can I try ?".
 
 2. *Build with [Wrath](https://github.com/propensive/wrath/)*
 
-   Wrath is a bootstrapping script for building  and other projects in
+   Wrath is a bootstrapping script for building Aristotle and other projects in
    the absence of a fully-featured build tool. It is designed to read the `fury`
    file in the project directory, and produce a collection of JAR files which can
    be added to a classpath, by compiling the project and all of its dependencies,
@@ -79,21 +79,21 @@ answer to the question, "how can I try ?".
    `/usr/local/bin/`.
 
    Clone this repository inside an empty directory, so that the build can
-   safely make clones of repositories it depends on as _peers_ of ``.
+   safely make clones of repositories it depends on as _peers_ of `aristotle`.
    Run `wrath -F` in the repository root. This will download and compile the
-   latest version of Scala, as well as all of 's dependencies.
+   latest version of Scala, as well as all of Aristotle's dependencies.
 
    If the build was successful, the compiled JAR files can be found in the
    `.wrath/dist` directory.
 
 ## Contributing
 
-Contributors to  are welcome and encouraged. New contributors may like
+Contributors to Aristotle are welcome and encouraged. New contributors may like
 to look for issues marked
-[beginner](https://github.com/propensive//labels/beginner).
+[beginner](https://github.com/propensive/aristotle/labels/beginner).
 
 We suggest that all contributors read the [Contributing
-Guide](/contributing.md) to make the process of contributing to 
+Guide](/contributing.md) to make the process of contributing to Aristotle
 easier.
 
 Please __do not__ contact project maintainers privately with questions unless
@@ -103,7 +103,7 @@ audience, and it can result in duplication of effort.
 
 ## Author
 
- was designed and developed by Jon Pretty, and commercial support and
+Aristotle was designed and developed by Jon Pretty, and commercial support and
 training on all aspects of Scala 3 is available from [Propensive
 O&Uuml;](https://propensive.com/).
 
@@ -132,6 +132,6 @@ symbol which indicates a _sum_.
 
 ## License
 
- is copyright &copy; 2024 Jon Pretty & Propensive O&Uuml;, and
+Aristotle is copyright &copy; 2024 Jon Pretty & Propensive O&Uuml;, and
 is made available under the [Apache 2.0 License](/license.md).
 
