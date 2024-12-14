@@ -17,10 +17,10 @@
 package aristotle
 
 import anticipation.*
+import dendrology.*, treeStyles.default
 import gossamer.*
 import rudiments.*
 import vacuous.*
-import dendrology.*, treeStyles.default
 
 import scala.annotation.*
 
