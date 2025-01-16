@@ -45,19 +45,16 @@ object Math:
     var index: Int = 1
     def next(): Optional[Char] = if index >= text.length then Unset else text(index).also(index += 1)
 
-    given Show[Optional[Char]] =
+    given Optional[Char] is Showable =
       case Unset => t""
       case char  => char.toString.tt
 
     def recur(current: Tree = Leaf): Tree = next() match
-      case Unset =>
-        current
-
+      case Unset => current
       case Open  => current match
         case Leaf                  => recur(Op(recur(Leaf), t"", Leaf))
         case Op(left, t"", right)  => recur(Op(left, t"×", recur(right)))
         case Op(left, node, right) => recur(Op(left, node, recur(right)))
-
       case Close => current
 
       case char: Char => current match
@@ -70,7 +67,6 @@ object Math:
 
     recur().also:
       if index != text.length then ???
-
 
   def tree(text: Text): Unit =
     println(parse(text).show)
@@ -114,3 +110,4 @@ enum MathMl:
   case Tr()
   case Under()
   case UnderOver()
+
